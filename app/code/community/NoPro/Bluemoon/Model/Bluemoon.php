@@ -5,7 +5,7 @@ class NoPro_Bluemoon_Model_Bluemoon extends Mage_Core_Model_Abstract
     /**
      * Define resource model
      */
-    protected function _construct()
+    protected function __construct()
     {
         $this->_init('nopro_bluemoon/bluemoon');
     }

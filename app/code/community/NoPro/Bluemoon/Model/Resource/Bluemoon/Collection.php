@@ -5,11 +5,11 @@ class NoPro_Bluemoon_Model_Resource_Bluemoon_Collection extends Mage_Core_Model_
     /**
      * Define collection model
      */
-    protected function _construct()
+    protected function __construct()
     {
         $this->_init('nopro_bluemoon/bluemoon');
     }
-
+    
     /**
      * Prepare for displaying in list
      *
