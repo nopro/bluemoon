@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+  <default>
+    <reference name="footer_links">
+      <!--
+      <action method="addLink" translate="label title" module="nopro_bluemoon" ifconfig="bluemoon/enabled">
+      -->
+      <action method="addLink" module="nopro_bluemoon">
+        <label>Blues</label>
+        <url>bluemoon</url>
+        <title>Blues</title>
+        <prepare>true</prepare>
+      </action>
+    </reference>
+  </default>
+
+  <bluemoon_index_index>
+    <reference name="content">
+      <block type="nopro_bluemoon/bluemoon" name="bluemoon" template="nopro/bluemoon/bluemoon.phtml" />
+    </reference>
+  </bluemoon_index_index>
+  
+</layout>

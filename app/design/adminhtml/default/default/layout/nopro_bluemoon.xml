@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento backend layout
+ *
+ * @author NoPro
+ */
+-->
+<layout>
+    <adminhtml_bluemoon_index>
+        <reference name="content">
+          <block type="nopro_bluemoon/adminhtml_bluemoon" name="bluemoon" />
+        </reference>
+    </adminhtml_bluemoon_index>
+
+    <!--
+    <adminhtml_bluemoon_grid>
+        <block type="nopro_bluemoon/adminhtml_bluemoon_grid" name="root"/>
+    </adminhtml_bluemoon_grid>
+    
+    <adminhtml_bluemoon_new>
+        <update handle="adminhtml_bluemoon_edit" />
+    </adminhtml_bluemoon_new>
+
+    <adminhtml_bluemoon_edit>
+        <update handle="editor"/>
+        <reference name="content">
+            <block type="nopro_bluemoon/adminhtml_bluemoon_edit" name="bluemoon_edit" />
+        </reference>
+        <reference name="left">
+            <block type="nopro_bluemoon/adminhtml_bluemoon_edit_tabs" name="bluemoon_edit_tabs">
+                <block type="nopro_bluemoon/adminhtml_bluemoon_edit_tab_main" name="bluemoon_edit_tab_main" />
+                <block type="nopro_bluemoon/adminhtml_bluemoon_edit_tab_content" name="bluemoon_edit_tab_content" />
+                <block type="nopro_bluemoon/adminhtml_bluemoon_edit_tab_image" name="bluemoon_edit_tab_image" />
+                <action method="addTab"><name>main_section</name><block>bluemoon_edit_tab_main</block></action>
+                <action method="addTab"><name>content_section</name><block>bluemoon_edit_tab_content</block></action>
+                <action method="addTab"><name>image_section</name><block>bluemoon_edit_tab_image</block></action>
+            </block>
+        </reference>
+    </adminhtml_bluemoon_edit>
+    -->
+    
+</layout>

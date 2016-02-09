@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<config>    
+  <modules>
+    <NoPro_Bluemoon>
+      <version>1.0.1.0</version>
+    </NoPro_Bluemoon>
+  </modules>
+  
+  <global>
+
+    <models>
+      <nopro_bluemoon>
+	<class>NoPro_Bluemoon_Model</class>
+	<resourceModel>bluemoon_resource</resourceModel>
+      </nopro_bluemoon>
+      <bluemoon_resource>
+	<entities>
+	  <bluemoon>
+	    <table>nopro_bluemoon</table>
+	  </bluemoon>
+	</entities>
+      </bluemoon_resource>
+    </models>
+
+    <helpers>
+      <nopro_bluemoon>
+	<class>NoPro_Bluemoon_Helper</class>
+      </nopro_bluemoon>
+    </helpers>
+    
+    <blocks>
+      <nopro_bluemoon>
+	<class>NoPro_Bluemoon_Block</class>
+      </nopro_bluemoon>
+    </blocks>
+
+    <resources>
+      <nopro_bluemoon_setup>
+	<setup>
+	  <module>NoPro_Bluemoon</module>
+	  <class>Mage_Core_Model_Resource_Setup</class>
+	</setup>
+      </nopro_bluemoon_setup>
+    </resources>
+
+  </global>
+
+  <frontend>
+    <routers>
+      <bluemoon>
+        <use>standard</use>
+        <args>
+          <module>NoPro_Bluemoon</module>
+          <frontName>bluemoon</frontName>
+        </args>
+      </bluemoon>
+    </routers>  
+    <layout>
+      <updates>
+	<bluemoon>
+	  <file>nopro_bluemoon.xml</file>
+	</bluemoon>
+      </updates>
+    </layout>
+  </frontend>
+  
+  <admin>
+    <routers>
+      <adminhtml>
+	<args>
+	  <modules>
+	    <NoPro_Bluemoon before="Mage_Adminhtml">NoPro_Bluemoon_Adminhtml</NoPro_Bluemoon>
+	  </modules>
+	</args>
+      </adminhtml>
+    </routers>
+  </admin>
+
+  <adminhtml>
+    <layout>
+      <updates>
+	<bluemoon>
+	  <file>nopro_bluemoon.xml</file>
+	</bluemoon>
+      </updates>
+    </layout>
+  </adminhtml>
+   
+  <default>
+    <nopro_bluemoon>
+      <creds>
+	<enabled>1</enabled>
+	<base_url>http://webpops.nopro.ww/bluemoon</base_url>
+      </creds>
+    </nopro_bluemoon>
+  </default>
+
+</config>
