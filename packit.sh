@@ -8,5 +8,6 @@ SKIPS="package.xml.tpl $(basename $0)"
 export CONT=$(php ../mod-contents.php $SKIPS) 
 awk '/^[ 	]*<contents>/ { print "    " ENVIRON["CONT"]; next; };{print;}' package.xml.tpl > package.xml
 
+emacs package.xml; exit
 touch -d $ARCHDATE package.xml $(find app)
 tar -czf $ARCHFILE package.xml app
