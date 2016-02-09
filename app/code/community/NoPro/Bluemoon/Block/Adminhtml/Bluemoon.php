@@ -3,47 +3,34 @@
 class NoPro_Bluemoon_Block_Adminhtml_Bluemoon extends Mage_Adminhtml_Block_Abstract {
 
   public function __construct() {
-    
+    parent::__construct();
   }
 
 }
 /**/
 
-class NoPro_Bluemoon_Block_Adminhtml_Bluemoon extends Mage_Adminhtml_Block_Catalog_Product_Grid {
+class NoPro_Bluemoon_Block_Adminhtml_Bluemoon extends Mage_Adminhtml_Block_Sales_Order_Grid {
 
-  protected function _prepareCollection() {
-    /**
-	$store = $this->_getStore();
-        $collection = Mage::getModel('catalog/product')->getCollection();
-	
-	if (Mage::helper('catalog')->isModuleEnabled('MDN_AdvancedStock')) {
-            $collection->joinField('shelf_location',
-                'cataloginventory/stock_item',
-                'shelf_location',
-                'product_id=entity_id',
-                '{{table}}.stock_id=1',
-                'left');
-        }
-	
-        $this->setCollection($collection);
-        $this->setDefaultSort('shelf_location');
-    /**/
+    protected function _prepareCollection() {
         parent::_prepareCollection();
         return $this;
-  }
-  
-  protected function _prepareColumns() {
-      
-    if (Mage::helper('catalog')->isModuleEnabled('MDN_AdvancedStock')) {
-      $this->addColumnAfter('shelf_location', array(
-						    'header' => Mage::helper('catalog')->__('Location'),
-						    //'width' => '100px',
-						    //'align' =>  'left',
-						    'index' => 'shelf_location',
-						    // 'renderer' => 'MDN_AdvancedStock_Block_MassStockEditor_Widget_Grid_Column_Renderer_StockLocation',
-						    ), 'status');
     }
-    
+
+
+    /**
+     * allow select_all in orders grid
+     *
+     * @param integer $page
+     * @return NoPro_Bluemoon_Model_Resource_Bluemoon_Collection
+     */
+    protected function _prepareMassAction()
+    {
+	parent::_prepareMassAction();
+	$this->getMassActionBlock()->setUseSelectAll(true);
+	return $this;
+    }
+  
+    protected function _prepareColumns() {
     return parent::_prepareColumns();
   }
 
