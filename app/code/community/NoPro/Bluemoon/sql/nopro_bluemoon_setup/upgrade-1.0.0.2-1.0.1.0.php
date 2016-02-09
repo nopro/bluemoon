@@ -29,7 +29,8 @@ foreach($newfields as $f) {
 
 $dropfields = array('n_feld_halt','nochn_feld');
 foreach($dropfields as $f) {
-  $pdo->dropColumn($table, $f);
+  if($pdo->tableColumnExists($table, $f))
+    $pdo->dropColumn($table, $f);
 }
 
 $this->endSetup();
