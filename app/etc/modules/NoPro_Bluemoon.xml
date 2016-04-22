@@ -6,6 +6,7 @@
       <codePool>community</codePool>
       <depends>
 	<Mage_Adminhtml />
+	<Mage_Api />
       </depends>
     </NoPro_Bluemoon>
   </modules>
