@@ -36,24 +36,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </enabled>
-                        <items_per_page>
-                            <label>News Per Page</label>
-                            <comment>Empty value is the same as default 20.</comment>
+                        <partner_id>
+                            <label>Partner ID</label>
+                            <comment>login @ NoPro</comment>
                             <sort_order>30</sort_order>
                             <depends><enabled>1</enabled></depends>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </items_per_page>
-                        <days_difference>
-                            <label>Number of days since a post has been marked as recently added</label>
-                            <comment>Empty value is the same as default 3.</comment>
-                            <sort_order>50</sort_order>
-                            <depends><enabled>1</enabled></depends>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </days_difference>
+                        </partner_id>
                     </fields>
 	</view>
 

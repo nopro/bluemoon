@@ -43,6 +43,46 @@
       </nopro_bluemoon_setup>
     </resources>
 
+    <events>
+      <!--
+      <cms_page_render>
+      <controller_front_init_before>
+      <controller_action_predispatch>
+      <controller_action_layout_generate_blocks_before>
+      <controller_action_layout_generate_blocks_after>
+
+      <sales_order_save_before>
+      <sales_order_save_after>
+      <sales_quote_save_after>
+      <sales_convert_order_to_quote>
+
+      <controller_action_order_place_after>
+      <checkout_submit_all_after>
+      -->
+      <!--
+      <controller_action_layout_generate_blocks_after>
+	<observers>
+	  <add_snippet>
+	    <type>singleton</type>
+	    <class>NoPro_Bluemoon_Model_Observer</class>
+	    <method>basic</method>
+	  </add_snippet>
+	</observers>
+      </controller_action_layout_generate_blocks_after>
+      -->
+      <!--
+      <checkout_submit_all_after>
+	<observers>
+	  <purchase>
+	    <type>singleton</type>
+	    <class>NoPro_Bluemoon_Model_Observer</class>
+	    <method>purchase</method>
+	  </purchase>
+	</observers>
+      </checkout_submit_all_after>
+      -->
+    </events>
+
   </global>
 
   <frontend>
@@ -63,7 +103,7 @@
       </updates>
     </layout>
   </frontend>
-  
+
   <admin>
     <routers>
       <adminhtml>
@@ -85,7 +125,7 @@
       </updates>
     </layout>
   </adminhtml>
-   
+
   <default>
     <nopro_bluemoon>
       <creds>
