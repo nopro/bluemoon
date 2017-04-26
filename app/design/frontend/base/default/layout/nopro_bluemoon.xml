@@ -3,14 +3,13 @@
 
   <default>
     <reference name="footer_links">
-      <action method="addLink" module="nopro_bluemoon" ifconfig="nopro_bluemoon/view/enabled">
+      <action method="addLink" module="nopro_bluemoon" ifconfig="nopro_bluemoon/general/enabled">
         <label>Blues</label>
         <url>bluemoon</url>
         <title>Blues</title>
         <prepare>true</prepare>
       </action>
     </reference>
-
   </default>
 
   <bluemoon_index_index>

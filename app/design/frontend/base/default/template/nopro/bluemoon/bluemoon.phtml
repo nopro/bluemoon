@@ -1,1 +1,9 @@
+<?php if($this->hasBlues()):?>
+<h2>Bluemoon</h2>
 <?php echo $this->__('hello darkness');?>
+<?php else:?>
+<!--
+<a href="{{store url=''}}">No Blues</a>
+-->
+<a href="<?php echo Mage::getUrl('');?>">No Blues</a>
+<?php endif;?>
